@@ -13,6 +13,7 @@ import useNavigation from "@/hooks/useNavigation";
 import { User } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../../../ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 export default function DesktopNav() {
   const paths = useNavigation();
@@ -35,9 +36,7 @@ export default function DesktopNav() {
           ))}
         </ul>
       </nav>
-      <Button>
-        <User />
-      </Button>
+      <UserButton />
     </Card>
   );
 }

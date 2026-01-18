@@ -10,9 +10,10 @@ import {
 } from "@/components/ui/card";
 
 import useNavigation from "@/hooks/useNavigation";
-import { Delete, Icon, User } from "lucide-react";
+
 import Link from "next/link";
 import { Button } from "../../../ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 export default function MobileNav() {
   const paths = useNavigation();
@@ -34,9 +35,7 @@ export default function MobileNav() {
             </li>
           ))}
           <li className='flex flex-col items-center gap-4'>
-            <Button>
-              <User />
-            </Button>
+            <UserButton />
           </li>
         </ul>
       </nav>
