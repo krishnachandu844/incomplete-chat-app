@@ -14,6 +14,7 @@ import useNavigation from "@/hooks/useNavigation";
 import Link from "next/link";
 import { Button } from "../../../ui/button";
 import { UserButton } from "@clerk/nextjs";
+import { ModeToggle } from "@/components/ThemeButton";
 
 export default function MobileNav() {
   const paths = useNavigation();
@@ -36,6 +37,9 @@ export default function MobileNav() {
           ))}
           <li className='flex flex-col items-center gap-4'>
             <UserButton />
+          </li>
+          <li className='flex flex-col items-center gap-4'>
+            <ModeToggle />
           </li>
         </ul>
       </nav>

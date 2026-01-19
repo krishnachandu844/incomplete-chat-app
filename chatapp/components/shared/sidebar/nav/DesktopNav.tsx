@@ -1,19 +1,11 @@
 "use client";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 import useNavigation from "@/hooks/useNavigation";
-import { User } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../../../ui/button";
 import { UserButton } from "@clerk/nextjs";
+import { ModeToggle } from "@/components/ThemeButton";
 
 export default function DesktopNav() {
   const paths = useNavigation();
@@ -36,7 +28,10 @@ export default function DesktopNav() {
           ))}
         </ul>
       </nav>
-      <UserButton />
+      <div className='flex flex-col items-center gap-2 gap-y-6'>
+        <ModeToggle />
+        <UserButton />
+      </div>
     </Card>
   );
 }
